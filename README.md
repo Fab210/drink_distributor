@@ -1,3 +1,3 @@
-# drink_distributor
+# drink distributor in C#
 
-<h5>Console App in C# to simulate drink distributor</h5>
+<h4>Console App in C# to simulate drink distributor</h4>
