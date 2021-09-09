@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "drink_dispenser/1.0.0": {
+        "runtime": {
+          "drink_dispenser.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "drink_dispenser/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

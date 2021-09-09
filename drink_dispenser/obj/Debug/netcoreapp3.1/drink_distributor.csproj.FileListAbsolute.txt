@@ -1,0 +1,13 @@
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\drink_distributor.exe
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\drink_distributor.deps.json
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\drink_distributor.runtimeconfig.json
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\drink_distributor.runtimeconfig.dev.json
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\drink_distributor.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\drink_distributor.pdb
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.AssemblyInfoInputs.cache
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.AssemblyInfo.cs
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.csproj.CoreCompileInputs.cache
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.pdb
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.genruntimeconfig.cache

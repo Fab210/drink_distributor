@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>drink_distributor</AssemblyName>
+    <RootNamespace>drink_distributor</RootNamespace>
+  </PropertyGroup>
+
+</Project>
