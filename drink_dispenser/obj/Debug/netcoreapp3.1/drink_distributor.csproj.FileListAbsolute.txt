@@ -11,4 +11,4 @@ C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netc
 C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.dll
 C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.pdb
 C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.genruntimeconfig.cache
-C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.csprojAssemblyReference.cache
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.csproj.AssemblyReference.cache
