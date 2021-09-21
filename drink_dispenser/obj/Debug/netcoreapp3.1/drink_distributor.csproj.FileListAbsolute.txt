@@ -12,3 +12,10 @@ C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netc
 C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.pdb
 C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.genruntimeconfig.cache
 C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.csproj.AssemblyReference.cache
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\fabio\Desktop\projets C#\drink_dispenser\drink_dispenser\obj\Debug\netcoreapp3.1\drink_distributor.csproj.CopyComplete

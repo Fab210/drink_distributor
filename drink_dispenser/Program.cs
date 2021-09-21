@@ -1,77 +1,65 @@
-﻿using System;
+﻿using drink_distributor.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+
 
 namespace drink_distributor
 {
 
-    class CoinsValueQuantity
-    {
-        public float coinValue;
-        public int coinQuantity;
-
-        public CoinsValueQuantity(float Value, int Quantity)
-        {
-            coinValue = Value;
-            coinQuantity = Quantity;
-        }
-    }
-
-
 
     class Program
     {
-        static string coca = "Coca Cola";
-        static string fanta = "Fanta";
-        static string sprite = "Sprite";
-        static float cocaPrice = 1.50f;
-        static float fantaPrice = 1.60f;
-        static float spritePrice = 1.25f;
-        static float coinsValueF = 0.0f;
-
- 
+        // VARIABLES
+        static float selectedCoinValue = 0.0f;
         static string selectedDrink;
 
-        static CoinsValueQuantity coin1C = new CoinsValueQuantity(0.01f, 13);
-        static CoinsValueQuantity coin2C = new CoinsValueQuantity(0.02f, 45);
-        static CoinsValueQuantity coin5C = new CoinsValueQuantity(0.05f, 31);
-        static CoinsValueQuantity coin10C = new CoinsValueQuantity(0.10f, 22);
-        static CoinsValueQuantity coin20C = new CoinsValueQuantity(0.20f, 33);
-        static CoinsValueQuantity coin50C = new CoinsValueQuantity(0.50f, 0);
-        static CoinsValueQuantity coin1Eur = new CoinsValueQuantity(1, 74);
-        static CoinsValueQuantity coin2Eur = new CoinsValueQuantity(2, 44);
+        static CoinModel coin1C = new CoinModel(0.01f, 13);
+        static CoinModel coin2C = new CoinModel(0.02f, 45);
+        static CoinModel coin5C = new CoinModel(0.05f, 31);
+        static CoinModel coin10C = new CoinModel(0.10f, 22);
+        static CoinModel coin20C = new CoinModel(0.20f, 33);
+        static CoinModel coin50C = new CoinModel(0.50f, 0);
+        static CoinModel coin1Eur = new CoinModel(1, 74);
+        static CoinModel coin2Eur = new CoinModel(2, 44);
 
+        DrinkModel coca = new DrinkModel("Coca Cola", 1.35f, 12, 1);
+        DrinkModel fanta = new DrinkModel("Fanta", 1.49f, 20, 2);
+        DrinkModel sprite = new DrinkModel("Sprite", 1.23f, 22, 3);
+     
 
-
-        static void SelectDrink()
+        // METHODES
+        public void SelectDrink()
         {
             Console.WriteLine("_____________________________________________");
             Console.WriteLine("");
             Console.WriteLine("Hello");
             Console.WriteLine();
             Console.WriteLine("Please select a drink : ");
-            
-            Console.WriteLine("1 : " + coca);
-            Console.WriteLine("2 : " + fanta);
-            Console.WriteLine("3 : " + sprite);
+
+            Console.WriteLine("1 : " + coca.drinkName);
+            Console.WriteLine("2 : " + fanta.drinkName);
+            Console.WriteLine("3 : " + sprite.drinkName);
             Console.WriteLine();
             selectedDrink = Console.ReadLine();
             int selectedDrink_num = int.Parse(selectedDrink);
-            
+
 
             switch (selectedDrink_num)
             {
                 case 1:
                     Console.WriteLine();
-                    Console.WriteLine("You selected " + coca);
+                    Console.WriteLine("You selected " + coca.drinkName);
                     PayDrink(1);
                     break;
                 case 2:
                     Console.WriteLine();
-                    Console.WriteLine("You selected " + fanta);
+                    Console.WriteLine("You selected " + fanta.drinkName);
                     PayDrink(2);
                     break;
                 case 3:
                     Console.WriteLine();
-                    Console.WriteLine("You selected " + sprite);
+                    Console.WriteLine("You selected " + sprite.drinkName);
                     PayDrink(3);
                     break;
                 default:
@@ -84,7 +72,7 @@ namespace drink_distributor
         }
 
 
-        static float SelectedCoin()
+        public float SelectedCoin()
         {
             Console.WriteLine("Select coin for paying");
             Console.WriteLine("______________________________________");
@@ -134,7 +122,7 @@ namespace drink_distributor
 
         }
 
-        static void PayDrink(int drinkSelection)
+        public void PayDrink(int drinkSelection)
         {
 
             try
@@ -143,24 +131,24 @@ namespace drink_distributor
                 {
                     case 1:
                         Console.WriteLine();
-                        Console.WriteLine("Please pay " + cocaPrice + " € for " + coca);
+                        Console.WriteLine("Please pay " + coca.drinkPrice + " € for " + coca.drinkName);
                         Console.WriteLine();
-                        coinsValueF = SelectedCoin();
-                        CalculateDrinkPrice(coinsValueF, cocaPrice);
+                        selectedCoinValue = SelectedCoin();
+                        CalculateDrinkPrice(selectedCoinValue, coca.drinkPrice);
                         break;
                     case 2:
                         Console.WriteLine();
-                        Console.WriteLine("Please pay " + fantaPrice + " € for " + fanta);
+                        Console.WriteLine("Please pay " + fanta.drinkPrice + " € for " + fanta.drinkName);
                         Console.WriteLine();
-                        coinsValueF = SelectedCoin();
-                        CalculateDrinkPrice(coinsValueF, fantaPrice);
+                        selectedCoinValue = SelectedCoin();
+                        CalculateDrinkPrice(selectedCoinValue, fanta.drinkPrice);
                         break;
                     case 3:
                         Console.WriteLine();
-                        Console.WriteLine("Please pay " + spritePrice + " € for " + sprite);
+                        Console.WriteLine("Please pay " + sprite.drinkPrice + " € for " + sprite.drinkName);
                         Console.WriteLine();
-                        coinsValueF = SelectedCoin();
-                        CalculateDrinkPrice(coinsValueF, spritePrice);
+                        selectedCoinValue = SelectedCoin();
+                        CalculateDrinkPrice(selectedCoinValue, sprite.drinkPrice);
                         break;
                 }
             }
@@ -171,7 +159,7 @@ namespace drink_distributor
             }
         }
 
-        static void CalculateDrinkPrice(float coins, float drinkPrice)
+        public void CalculateDrinkPrice(float coins, float drinkPrice)
         {
             float moneyDifference = 0.0f;
             if (coins < drinkPrice)
@@ -190,7 +178,7 @@ namespace drink_distributor
                     Console.WriteLine();
                     Console.WriteLine("there is still " + moneyDifference + "€ missing");
                     missingMoneyValueF = SelectedCoin();
-                   
+
                     moneyDifference = moneyDifference - missingMoneyValueF;
                     moneyDifference = RoundNumber(moneyDifference);
                 }
@@ -214,7 +202,7 @@ namespace drink_distributor
 
 
         // Convert negativ number into positiv
-        static float ConvertToPositivNumber(float number)
+        public float ConvertToPositivNumber(float number)
         {
             number = number * -1;
 
@@ -222,14 +210,14 @@ namespace drink_distributor
         }
 
         // Round Number to 2 decimal places
-        static float RoundNumber(float coinsValue)
+        public float RoundNumber(float coinsValue)
         {
             coinsValue = (float)Math.Round(coinsValue * 100f) / 100f;
 
             return coinsValue;
         }
 
-        static void ReturnMoney(float moneyGiveBack)
+        public void ReturnMoney(float moneyGiveBack)
         {
             moneyGiveBack = RoundNumber(moneyGiveBack);
             moneyGiveBack = ConvertToPositivNumber(moneyGiveBack);
@@ -243,7 +231,7 @@ namespace drink_distributor
             Console.WriteLine("Coins before Quantity : " + coin1Eur.coinQuantity + " / value : " + coin1Eur.coinValue);
             Console.WriteLine("Coins before Quantity : " + coin2Eur.coinQuantity + " / value : " + coin2Eur.coinValue);
 
-            Console.WriteLine("Monnaie rendu de : (" + coinsValueF + ")");
+            Console.WriteLine("Monnaie rendu de : (" + selectedCoinValue + ")");
 
             while (moneyGiveBack != 0.0f)
             {
@@ -318,8 +306,41 @@ namespace drink_distributor
             Console.WriteLine("Coins after Quantity : " + coin2Eur.coinQuantity + " / value : " + coin2Eur.coinValue);
 
         }
+        public static List<CoinModel> Index()
+        {
+            string connetionString = null;
+            List<CoinModel> coinList = new List<CoinModel>();
 
+            SqlConnection connection;
+            SqlCommand command;
+            string sql = null;
+            SqlDataReader dataReader;
+            connetionString = "Data Source=localhost;Database=distributor;Integrated Security=true;";
+            sql = "SELECT * From coins";
+            connection = new SqlConnection(connetionString);
+            try
+            {
+                connection.Open();
+                command = new SqlCommand(sql, connection);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    CoinModel coins = new CoinModel();
+                    coins.coinID = Convert.ToString(dataReader["coinID"]);
+                    //Console.WriteLine(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2));
+                    coinList.Add(coins);
+                }
+                dataReader.Close();
+                command.Dispose();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
 
+            return coinList;
+        }
 
 
 
@@ -328,7 +349,11 @@ namespace drink_distributor
             // Convert special symbols to show on console ex : €
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            SelectDrink();
+            //Console.WriteLine($" INFO {coca}");
+            Index();
+
+            //Program p = new Program();
+            //p.SelectDrink();
 
         }
     }
