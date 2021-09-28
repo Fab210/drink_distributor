@@ -17,11 +17,21 @@ namespace drink_distributor
             // Convert special symbols to show on console ex : €
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            //Console.WriteLine($" INFO {coca}");
-            //Index();
+            /*var CoinList = Distributor.Index();
+
+            foreach (var item in CoinList)
+            {
+                Console.WriteLine("\nCoin Value " + item.coinValue + "/ Coin Quantity " + item.coinQuantity);
+
+            }*/
+
+         
 
             Distributor p = new Distributor();
             p.SelectDrink();
+
+           
+            
 
         }
     }

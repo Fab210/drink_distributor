@@ -343,6 +343,9 @@ namespace drink_distributor.Processing
                 {
                     CoinModel coins = new CoinModel();
                     coins.coinID = Convert.ToString(dataReader["coinID"]);
+                    coins.coinPosition = Convert.ToInt32(dataReader["coinPosition"]);
+                    coins.coinValue = Convert.ToSingle(dataReader["coinValue"]);
+                    coins.coinQuantity = Convert.ToInt32(dataReader["coinQuantity"]);
                     //Console.WriteLine(dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2));
                     coinList.Add(coins);
                 }
